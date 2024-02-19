@@ -2,10 +2,10 @@
 import style from "./pokemon.modular.css";
 import { useState, useEffect } from 'react';
 import Image from "next/image";
-export default function Descripcion() {
-    const [imagenpokemon, setImagenpokemon] = useState("/vercel.svg");
+export default function Pokemon({ pokemonId }) {
+const [imagenpokemon, setImagenpokemon] = useState("/vercel.svg");
     const [npokemon, setNpokemon] = useState("nombre");
-    const url = "https://pokeapi.co/api/v2/pokemon/25";
+    const url = `https://pokeapi.co/api/v2/pokemon/${pokemonId}`;
     const [habilidad, setHabilidad] = useState("habilidad");
     const [habilidad1, setHabilidad1] = useState("habilidad1");
     const [type, setType] = useState("tipo");
@@ -13,7 +13,7 @@ export default function Descripcion() {
     const [height, setHeight] = useState(0);
     const [weight, setWeight] = useState(0);
     const [stats, setStats] = useState([]);
-    const [id,setId]=useState("id")
+    const [id, setId] = useState("id");
     const Letras = ({ label, value }) => {
         return (
             <p>
@@ -40,6 +40,7 @@ export default function Descripcion() {
             })
     }, []);
     return (
+        
         <div className={"principal"}>
             <div>
                 <h2>My Pokemon</h2>

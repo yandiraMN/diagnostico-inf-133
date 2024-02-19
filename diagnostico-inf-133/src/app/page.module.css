@@ -1,11 +1,23 @@
-.main {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  padding: 6rem;
-  min-height: 100vh;
+.main{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  padding-top: 1cm;
 }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+@media (prefers-reduced-motion) {
+  .card:hover span {
+    transform: none;
+  }
+}
+
 
 .description {
   display: inherit;
@@ -131,14 +143,6 @@
   .content {
     padding: 4rem;
   }
-
-  .grid {
-    grid-template-columns: 1fr;
-    margin-bottom: 120px;
-    max-width: 320px;
-    text-align: center;
-  }
-
   .card {
     padding: 1rem 2.5rem;
   }
