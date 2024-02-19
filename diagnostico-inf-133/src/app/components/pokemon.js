@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function Descripcion() {
     const [imagenpokemon, setImagenpokemon] = useState("/vercel.svg");
     const [npokemon, setNpokemon] = useState("nombre");
-    const url = "https://pokeapi.co/api/v2/pokemon/15";
+    const url = "https://pokeapi.co/api/v2/pokemon/25";
     const [habilidad, setHabilidad] = useState("habilidad");
     const [habilidad1, setHabilidad1] = useState("habilidad1");
     const [type, setType] = useState("tipo");
